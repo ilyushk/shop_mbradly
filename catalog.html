@@ -99,7 +99,7 @@
     <div class="container">
         <h1>Каталог одежды</h1>
         <div class="categories">
-            <div class="category active" data-category="all">Весь каталог</div>
+            <div class="category" data-category="all">Весь каталог</div>
             <div class="category" data-category="t-shirts">Футболки</div>
             <div class="category" data-category="pants">Худи</div>
             <div class="category" data-category="jackets">Панамы</div>
@@ -138,19 +138,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         document.addEventListener("DOMContentLoaded", function() {
-          // Получаем значение параметра запроса category из URL
-          const urlParams = new URLSearchParams(window.location.search);
-          const category = urlParams.get('category');
-        
-          // Выделяем соответствующую категорию в меню
-          const activeCategory = document.querySelector(`.category[data-category="${category}"]`);
-          if (activeCategory) {
-            activeCategory.classList.add('active');
-          }
-        
-          // Фильтруем элементы каталога
-          filterItems(category);
-        });
+    // Получаем значение параметра запроса category из URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+  
+    // Выделяем соответствующую категорию в меню
+    const activeCategory = document.querySelector(`.category[data-category="${category}"]`);
+    if (activeCategory) {
+      activeCategory.classList.add('active');
+    }
+  
+    // Фильтруем элементы каталога
+    if (category !== null) {
+      filterItems(category);
+    } else {
+      filterItems('all'); // Если параметр category не указан, показываем все элементы
+    }
+});
+
         
         function filterItems(category) {
           const items = document.querySelectorAll('.item');
@@ -163,6 +168,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
           });
         }
+
+        
         </script>
 
 
