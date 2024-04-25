@@ -108,6 +108,35 @@
     </div>
 
     <script>
+document.addEventListener("DOMContentLoaded", function() {
+            const categories = document.querySelectorAll('.category');
+
+            categories.forEach(category => {
+                category.addEventListener('click', () => {
+                    const selectedCategory = category.dataset.category;
+
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    category.classList.add('active');
+
+                    filterItems(selectedCategory);
+                });
+            });
+
+            function filterItems(category) {
+                const items = document.querySelectorAll('.item');
+                items.forEach(item => {
+                    const itemCategory = item.dataset.category;
+                    if (category === 'all' || itemCategory === category) {
+                        item.style.display = 'inline-block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+
+
         document.addEventListener("DOMContentLoaded", function() {
           // Получаем значение параметра запроса category из URL
           const urlParams = new URLSearchParams(window.location.search);
