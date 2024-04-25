@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог одежды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .categories {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .category {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+            color: #007bff;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
+        .category.active {
+            font-weight: bold;
+            border-bottom-color: #007bff;
+        }
+        .item {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+            width: calc(50% - 20px); /* Изменено для мобильной версии */
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+        .item:hover {
+            transform: translateY(-5px);
+        }
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+.item-content {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.item-content a {
+  color: #000000; /* белый цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+  transition: color 0.3s ease; /* плавное изменение цвета при наведении */
+}
+
+.item-content a:hover {
+  color: #ff0000; /* изменение цвета при наведении на ссылку */
+}
+
+.item-content a:visited {
+  color: #000000; /* цвет уже посещенной ссылки */
+}
+
+.item-content a:focus, .item-content a:active {
+  outline: none; /* убираем рамку при фокусе или активации */
+}
+
+  
+        
+
+        /* Медиа-запрос для мобильных устройств */
+        @media screen and (max-width: 600px) {
+            .item {
+                width: 100%; /* Изменено для мобильной версии */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Каталог одежды</h1>
+        <div class="categories">
+            <div class="category active" data-category="all">Весь каталог</div>
+            <div class="category" data-category="t-shirts">Футболки</div>
+            <div class="category" data-category="pants">Худи</div>
+            <div class="category" data-category="jackets">Панамы</div>
+            <div class="category" data-category="t-shirt">Бейсболки</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const categories = document.querySelectorAll('.category');
+
+            categories.forEach(category => {
+                category.addEventListener('click', () => {
+                    const selectedCategory = category.dataset.category;
+
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    category.classList.add('active');
+
+                    filterItems(selectedCategory);
+                });
+            });
+
+            function filterItems(category) {
+                const items = document.querySelectorAll('.item');
+                items.forEach(item => {
+                    const itemCategory = item.dataset.category;
+                    if (category === 'all' || itemCategory === category) {
+                        item.style.display = 'inline-block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+        
+    </script>
+
+
+
+
+    <div class="item" data-category="t-shirts">
+        <a href="fot.html">
+            <img src="image/photo_5258474691700579415_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка UrbanStyle black</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot2.html">
+            <img src="image/photo_5253560488904744752_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка UrbanStyle white</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div> 
+    <div class="item" data-category="t-shirts">
+        <a href="fot3.html">
+            <img src="image/photo_5258474691700579410_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка NovaTrend black</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot4.html">
+            <img src="image/photo_5258474691700579411_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка NovaTrend white</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot5.html">
+            <img src="image/photo_5258474691700579422_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка StreetChic black</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+
+    </div>
+</div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot6.html">
+            <img src="image/photo_5258474691700579417_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка StreetChic white</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot7.html">
+            <img src="image/photo_5274132862561540744_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка EliteFit black</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot8.html">
+            <img src="image/photo_5274132862561540743_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка EliteFit white</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot9.html">
+            <img src="image/photo_5274132862561540611_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка PrimeWear black</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+            </div>
+    </div>
+    <div class="item" data-category="t-shirts">
+        <a href="fot10.html">
+            <img src="image/photo_5274132862561540608_x.jpg" alt="Футболка">
+            <div class="item-content">
+                <h3>Футболка PrimeWear white</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="item" data-category="pants">
+        <a href="hud.html">
+            <img src="image/photo_5258474691700579452_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи CozyCraft black</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud2.html">
+            <img src="image/photo_5258474691700579453_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи CozyCraft white</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud3.html">
+            <img src="image/photo_5274132862561540614_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи UrbanHood black</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud4.html">
+            <img src="image/photo_5274132862561540612_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи UrbanHood white</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud5.html">
+            <img src="image/photo_5274132862561540615_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи ChillWear black</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud6.html">
+            <img src="image/photo_5274132862561540616_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи ChillWear white</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud7.html">
+            <img src="image/photo_5274132862561540619_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи LoungeLife black</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud8.html">
+            <img src="image/photo_5274132862561540617_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи LoungeLife white</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud9.html">
+            <img src="image/photo_5274132862561540620_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи CosyThreads black</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+    <div class="item" data-category="pants">
+        <a href="hud10.html">
+            <img src="image/photo_5274132862561540621_x.jpg" alt="Худи">
+            <div class="item-content">
+                <h3>Худи CosyThreads white</h3>
+            </a>
+                <p>Состав: 70% хлопок, 30% полиэстер</p>
+    </div>
+</div>
+
+
+
+
+
+<div class="item" data-category="jackets">
+        <a href="pan.html">
+            <img src="image/mens_panamas_front_black_500.jpg" alt="Панама">
+            <div class="item-content">
+                <h3>Панама ZipStyle black</h3>
+            </a>
+                <p>Состав: 100% хлопок</p>
+    </div>
+</div>
+<div class="item" data-category="jackets">
+    <a href="pan2.html">
+        <img src="image/mens_panamas_front_white_500.jpg" alt="Панама">
+        <div class="item-content">
+            <h3>Панама ZipStyle white</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+<div class="item" data-category="jackets">
+    <a href="pan3.html">
+        <img src="image/mens_panamas_front_black_500 (1).jpg" alt="Панама">
+        <div class="item-content">
+            <h3>Панама LockLuxe black</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+<div class="item" data-category="jackets">
+    <a href="pan4.html">
+        <img src="image/mens_panamas_front_white_500 (1).jpg" alt="Панама">
+        <div class="item-content">
+            <h3>Панама LockLuxe white</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+<div class="item" data-category="jackets">
+    <a href="pan5.html">
+        <img src="image/mens_panamas_front_black_500 (2).jpg" alt="Панама">
+        <div class="item-content">
+            <h3>Панама SecureGear black</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+<div class="item" data-category="jackets">
+    <a href="pan6.html">
+        <img src="image/mens_panamas_front_white_500 (2).jpg" alt="Панама">
+        <div class="item-content">
+            <h3>Панама SecureGear white</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+
+
+
+
+
+<div class="item" data-category="t-shirt">
+    <a href="cap.html">
+        <img src="image/caps_front_black_500.jpg" alt="Бейсболки">
+        <div class="item-content">
+            <h3>Бейсболки BaseBallistic black</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+<div class="item" data-category="t-shirt">
+    <a href="cap2.html">
+        <img src="image/caps_front_white_500.jpg" alt="Бейсболки">
+        <div class="item-content">
+            <h3>Бейсболки BaseBallistic white</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+<div class="item" data-category="t-shirt">
+    <a href="cap3.html">
+        <img src="image/caps_front_black_500 (1).jpg" alt="Бейсболки">
+        <div class="item-content">
+            <h3>Бейсболки CapCraze black</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+<div class="item" data-category="t-shirt">
+    <a href="cap4.html">
+        <img src="image/caps_front_white_500 (1).jpg" alt="Бейсболки">
+        <div class="item-content">
+            <h3>Бейсболки CapCraze white</h3>
+        </a>
+            <p>Состав: 100% хлопок</p>
+</div>
+</div>
+</body>
+</html>

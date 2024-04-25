@@ -1,0 +1,425 @@
+/* Сохраняем текущие стили */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  background-color: red;
+}
+
+.header {
+  background-color: black;
+}
+
+.container {
+  width: 100%; /* Изменено */
+  margin-left: 0; /* Изменено */
+  margin-right: 0; /* Изменено */
+}
+
+.menu {
+  display: flex;
+  color: #ffffff;
+  font-family: PT Sans;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.menu__item {
+  display: flex;
+}
+
+.menu__item-list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu__link-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.menu__link-list a {
+  color: #ffffff; /* белый цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+  transition: color 0.3s ease; /* плавное изменение цвета при наведении */
+}
+
+.menu__link-list a:hover {
+  color: #ff0000; /* изменение цвета при наведении на ссылку */
+}
+
+.menu__link-list a:visited {
+  color: #cccccc; /* цвет уже посещенной ссылки */
+}
+
+.menu__link-list a:focus, .menu__link-list a:active {
+  outline: none; /* убираем рамку при фокусе или активации */
+}
+.menu__link-list1 {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.menu__link-list1 a {
+  color: #ffffff; /* белый цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+  transition: color 0.3s ease; /* плавное изменение цвета при наведении */
+}
+
+.menu__link-list1 a:hover {
+  color: #ff0000; /* изменение цвета при наведении на ссылку */
+}
+
+.menu__link-list1 a:visited {
+  color: #ffffff; /* цвет уже посещенной ссылки */
+}
+
+.menu__link-list1 a:focus, .menu__link-list a:active {
+  outline: none; /* убираем рамку при фокусе или активации */
+}
+
+.menu__item-image {
+  padding-right: 70px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo{
+  padding-left: 50px;
+}
+
+.logo_left {
+  color: #ffffff;
+}
+
+.logo_right {
+  padding: 3px;
+  border-radius: 3px;
+  background: #ff0000;
+  color: #ffffff;
+}
+
+.news {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-areas: "a b c"
+    "a d e";
+  grid-gap: 20px;
+  position: relative;
+  flex-wrap: wrap;
+  column-count: 3;
+  grid-auto-flow: dense;
+}
+
+.news__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.news__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 300px;
+  justify-content: flex-end;
+}
+
+.news__content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 82.82%);
+  z-index: -1;
+
+}
+
+.cover {
+  object-fit: cover;
+  flex-basis: 100%;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.news__info {
+  position: absolute;
+  top: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  background: #4A90E2;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.news__title {
+  color: #FFF;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.news__item:nth-child(1) {
+  height: 100%;
+  grid-row: 2 span;
+}
+
+.footer {
+  margin-top: 80px;
+  background: #171717;
+  position: relative;
+}
+
+.end__strock {
+  padding-top: 60px;
+}
+
+.end__info {
+  color: #CECECE;
+  font-family: PT Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.end__content {
+  margin-top: 30px;
+  width: 270px;
+}
+
+.end__socialnetwork {
+  display: table;
+  padding-top: 64px;
+  padding-bottom: 174px;
+}
+
+.end__networktext {
+  color: #FFF;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.image__end {
+  padding-top: 23px;
+}
+
+.end__network {
+  padding-right: 15px;
+}
+
+.second__end {
+  padding-top: 62px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0; /* Изменено */
+  margin-right: 0; /* Изменено */
+}
+
+.second__textim1 {
+  color: #FFF;
+  font-family: PT Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  flex-shrink: 0;
+}
+
+.second__textim {
+  color: #FFF;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  flex-shrink: 0;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 2em;
+  grid-gap: 17%;
+  align-self: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.end__item {
+  display: flex;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+
+.finish__text {
+  padding-right: 820px;
+}
+
+.footer__finish {
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+/* Стили для мобильных экранов */
+@media only screen and (max-width: 600px) {
+  .header {
+    white-space: nowrap;
+  }
+
+  .container {
+    margin-right: 5%;
+  }
+
+  .menu {
+    align-items: center;
+    padding: 10px 0;
+    display: flex;
+    color: #ffffff;
+    font-family: PT Sans;
+    font-size: 18px;
+}
+
+.menu__item{
+  padding-left: 30px;
+}
+
+
+  .menu__link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu__item-image {
+    display: none;
+  }
+
+  .logo_right {
+    margin-top: 10px;
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
+
+  .news__title{
+    display: none;
+  }
+
+  .news__content{
+    display: none;
+  }
+
+  .news__item {
+    margin-bottom: 20px;
+  }
+
+  .news__image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news__content {
+    padding: 15px;
+  }
+
+  .footer {
+    margin-top: 20px;
+    padding: 20px 0;
+  }
+
+  .end__socialnetwork {
+    padding-top: 20px;
+  }
+
+  .image__end {
+    display: flex;
+    gap: 10px;
+  }
+
+  .second__end {
+    display: flex;
+    padding-top: -162px;
+    padding-right: 250px;
+    padding-left: 100px; /* Добавлено */
+  }
+
+  .container .news__item:first-child {
+    display: none;
+  }
+
+  .second__content {
+    text-align: center;
+  }
+
+  .second__textim1, .second__textim {
+    text-align: center;
+  }
+
+  .menu__link-list1{
+    display: none;
+  }
+
+  .end__socialnetwork {
+    display: table;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+.second__end {
+    display: none;
+    padding-top: -162px;
+    padding-left: 100px;
+}
+
+  .end__strock {
+    padding-top: 0px; 
+}
+
+  .footer__top{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .news__info{
+    display: none;
+  }
+  .finish__text {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    
+  }
+}
