@@ -308,6 +308,10 @@ a {
 
 /* Стили для мобильных экранов */
 @media only screen and (max-width: 600px) {
+  * {
+    font-family: 'century schoolbook';
+  }
+
   .header {
     white-space: nowrap;
   }
