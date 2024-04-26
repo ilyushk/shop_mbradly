@@ -6,7 +6,7 @@
     <title>Каталог одежды</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: century schoolbook;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
@@ -58,8 +58,27 @@
             height: auto;
         }
 
+        .item {
+    /* Добавляем стили для центрирования содержимого */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item img {
+    /* Добавляем стили для изображения, чтобы оно также было центрировано */
+    display: block;
+    margin: 0 auto;
+}
+
 .item-content {
-  display: flex;
+    /* Добавляем стили для содержимого блока */
+    margin-top: 100px;
+}
+
+.item-content {
   list-style: none;
   margin: 0;
   padding: 0;

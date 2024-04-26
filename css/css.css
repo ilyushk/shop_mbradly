@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: century schoolbook;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
 .menu__item-list {
   margin-left: auto;
   margin-right: auto;
+  font-size: 20px;
 }
 
 .menu__link-list {
@@ -103,10 +105,15 @@ a {
 
 .logo{
   padding-left: 50px;
+  font-size: 15px;
 }
 
 .logo_left {
   color: #ffffff;
+}
+
+.logo__end{
+  font-size: 20px;
 }
 
 .logo_right {
@@ -214,8 +221,8 @@ a {
 
 .end__socialnetwork {
   display: table;
-  padding-top: 64px;
-  padding-bottom: 174px;
+  padding-top: 20px;
+  padding-bottom: 111px;
 }
 
 .end__networktext {
@@ -312,15 +319,16 @@ a {
     font-size: 18px;
 }
 
-.menu__item{
-  padding-left: 30px;
+.logo{
+padding-right: 20px;
+padding-left: 20px;
 }
-
 
   .menu__link-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 20px;
   }
 
   .menu__item-image {
@@ -346,6 +354,7 @@ a {
 
   .news__text-block {
     margin-bottom: 20px;
+    width: 100%;
   }
 
   .news__image img {
@@ -385,6 +394,15 @@ a {
   .container .news__item:first-child {
     display: none;
   }
+
+  .news__content {
+    text-align: center; /* Выравнивание текста по центру */
+    padding-bottom: 20px;
+  }
+
+  .news__content h3 {
+    font-size: 65px;
+}
 
   .second__content {
     text-align: center;
