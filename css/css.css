@@ -143,15 +143,37 @@ a {
   justify-content: flex-end;
 }
 
-.news__content {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  color: #ffffff;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 82.82%);
-  z-index: -1;
-
+.news__text-block {
+  border: 10px solid #000; /* Добавление рамки */
 }
+
+.news__content h3 {
+  font-size: 80px; /* Установка большого шрифта */
+}
+
+.news__content {
+  text-align: center; /* Выравнивание текста по центру */
+  padding-bottom: 110px;
+}
+
+.news__text-block a {
+  color: #000000; /* белый цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+  transition: color 0.3s ease; /* плавное изменение цвета при наведении */
+}
+
+.news__text-block a:hover {
+  color: #ff0000; /* изменение цвета при наведении на ссылку */
+}
+
+.news__text-block a:visited {
+  color: #000000; /* цвет уже посещенной ссылки */
+}
+
+.news__text-block a:focus, .news__text-block a:active {
+  outline: none; /* убираем рамку при фокусе или активации */
+}
+
 
 .cover {
   object-fit: cover;
@@ -160,25 +182,6 @@ a {
   width: 100%;
   background-size: cover;
   background-position: center;
-}
-
-.news__info {
-  position: absolute;
-  top: 20px;
-  padding: 4px;
-  border-radius: 4px;
-  background: #4A90E2;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.news__title {
-  color: #FFF;
-  font-family: PT Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
 }
 
 .news__item:nth-child(1) {
@@ -331,7 +334,6 @@ a {
   .news {
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
   }
 
   .news__title{
@@ -339,16 +341,20 @@ a {
   }
 
   .news__content{
-    display: none;
+    padding-bottom: 120px;
   }
 
-  .news__item {
+  .news__text-block {
     margin-bottom: 20px;
   }
 
   .news__image img {
     width: 100%;
     height: auto;
+  }
+
+  h3 {
+    padding-bottom: 100px;
   }
 
   .news__content {
@@ -413,9 +419,6 @@ a {
     padding-right: 5%;
   }
 
-  .news__info{
-    display: none;
-  }
   .finish__text {
     text-align: center;
     margin-top: 20px;
