@@ -21,9 +21,9 @@ body {
 }
 
 .container {
-  width: 100%; /* Изменено */
-  margin-left: 0; /* Изменено */
-  margin-right: 0; /* Изменено */
+  width: 100%; 
+  margin-left: 0; 
+  margin-right: 0; 
 }
 
 .menu {
@@ -53,21 +53,21 @@ body {
 }
 
 .menu__link-list a {
-  color: #ffffff; /* белый цвет текста ссылки */
-  text-decoration: none; /* убираем подчеркивание */
-  transition: color 0.3s ease; /* плавное изменение цвета при наведении */
+  color: #ffffff; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
 }
 
 .menu__link-list a:hover {
-  color: #ff0000; /* изменение цвета при наведении на ссылку */
+  color: #ff0000; 
 }
 
 .menu__link-list a:visited {
-  color: #cccccc; /* цвет уже посещенной ссылки */
+  color: #cccccc; 
 }
 
 .menu__link-list a:focus, .menu__link-list a:active {
-  outline: none; /* убираем рамку при фокусе или активации */
+  outline: none; 
 }
 .menu__link-list1 {
   display: flex;
@@ -78,13 +78,13 @@ body {
 }
 
 .menu__link-list1 a {
-  color: #ffffff; /* белый цвет текста ссылки */
-  text-decoration: none; /* убираем подчеркивание */
-  transition: color 0.3s ease; /* плавное изменение цвета при наведении */
+  color: #ffffff; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
 }
 
 .menu__link-list1 a:hover {
-  color: #ff0000; /* изменение цвета при наведении на ссылку */
+  color: #ff0000; 
 }
 
 .menu__link-list1 a:visited {
@@ -244,8 +244,8 @@ a {
   padding-top: 62px;
   display: flex;
   justify-content: space-between;
-  margin-left: 0; /* Изменено */
-  margin-right: 0; /* Изменено */
+  margin-left: 0; 
+  margin-right: 0; 
 }
 
 .second__textim1 {
