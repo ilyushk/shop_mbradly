@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: comic sans ms;
+  font-family: Verdana;
 }
 
 body {
@@ -303,7 +303,7 @@ a {
 /* Стили для мобильных экранов */
 @media only screen and (max-width: 600px) {
 *{
-  font-family: comic sans ms;
+  font-family: Verdana;
 }
   
   .header {
